@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Company extends Model
+{
+    use HasFactory;
+
+      /**
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'country',
+        'categories',    
+        'location',
+        'logo_url',
+    ];
+
+    /**
+     * @return mixed
+     */
+    public function users()
+    {
+        return $this->hasMany(User::class, 'company_id');
+    }
+}
