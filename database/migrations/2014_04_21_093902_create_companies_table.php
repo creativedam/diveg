@@ -19,8 +19,10 @@ return new class extends Migration
             $table->string('country')->default('Botswana');
             $table->string('location')->default('Gaborone');
             $table->string('logo_url')->nullable();
-            $table->string('categories')->nullable();
+            $table->unsignedBigInteger('plan_id')->nullable();
             $table->timestamps();
+
+            $table->foreign('plan_id')->references('id')->on('plans');
         });
     }
 

@@ -15,10 +15,38 @@ class Company extends Model
     protected $fillable = [
         'name',
         'country',
-        'categories',    
+        'plan_id',  
         'location',
         'logo_url',
     ];
+
+    protected static function booting()
+    {
+        parent::booting();
+
+        self::creating(function ($model) {
+            if ( is_null($model->logo_url) ) {
+                $model->logo_url = '';
+            }
+        });
+    }
+
+    /**
+     * @return mixed
+     */
+    public function toSearchableArray()
+    {
+        return $this->toArray();
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function plan()
+    {
+        return $this->belongsTo(Plan::class, 'plan_id');
+    }
 
     /**
      * @return mixed
