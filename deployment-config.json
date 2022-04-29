@@ -1,8 +1,8 @@
 {
     "name": "server-1",
-    "ip" : "159.223.233.221",
-    "username": "creativedam",
-    "password": "1q2w3e4r5t",
+    "ip" : "167.99.46.192",
+    "username": "root",
+    "password": "*J+kx+vG2Qdm?rWnNZM+kA=H@3mJ!YWDs?qpqRZh?uzJKUgZ5*_MgcG4tP*xX!38k$SWj9c%x8!_b*=QEm$utWUYS6=M-W^3T&h@T53wwLLN9?vkgzC8v+ev^9B*j-jj",
     "port" : "22",
     "beforeHooks": "",
     "afterHooks": "",
